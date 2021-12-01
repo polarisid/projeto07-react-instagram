@@ -11,3 +11,4 @@ function RenderHTML(){
 const htmltela1 = RenderHTML();
 
 ReactDOM.render(htmltela1, minhaTela);
+alert("tudook")
