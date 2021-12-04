@@ -7,7 +7,5 @@ export default function App(){
             <Topo/>
             <Conteudo/>
         </div>
-
-
     )
 }

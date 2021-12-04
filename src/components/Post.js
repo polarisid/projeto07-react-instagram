@@ -30,7 +30,7 @@ export default function Post(prop){
                     <div class="curtidas">
                         <img src={prop.lastPeopleLikePic} />
                         <div class="texto">
-                            Curtido por <strong>{prop.lastPeopleLikeName}</strong> e <strong>outras {prop.likesCount} pessoas</strong>
+                            Curtido por <strong>{prop.lastPeopleLikeName}</strong> e <strong>outras {(prop.likesCount).toLocaleString('pt-BR')} pessoas</strong>
                         </div>
                     </div>
               </div>

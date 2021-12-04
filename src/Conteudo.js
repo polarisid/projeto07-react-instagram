@@ -1,6 +1,7 @@
 import Post from './components/Post';
 import Story from './components/Story';
 import Sugestao from './components/Sugestao';
+import User from './components/User';
 
 const storys =[
     {pic:"assets/img/9gag.svg" , username :"9gag"},
@@ -38,46 +39,41 @@ const recomendados =[
 
     
 ]
+
 export default function Conteudo(){
     return(
         <div class="corpo">
-        <div class="esquerda">
-            <div class="stories">
-                {storys.map(nome =>  <Story pic ={nome.pic}  username ={nome.username}/>)}
-                <div class="setinha">
-                <ion-icon name="chevron-forward-circle"></ion-icon>
+            <div class="esquerda">
+                <div class="stories">
+                    {storys.map(nome =>  <Story pic ={nome.pic}  username ={nome.username}/>)}
+                    <div class="setinha">
+                    <ion-icon name="chevron-forward-circle"></ion-icon>
+                    </div>
                 </div>
+            <div class="posts">
+                    {posts.map(nome =>  <Post pName ={nome.profileName}  pPic ={nome.profilePic} postPic ={nome.postPic} lastPeopleLikeName = {nome.lastPeopleLikeName} lastPeopleLikePic= {nome.lastPeopleLikePic} likesCount={nome.likesCount}/>)}
             </div>
-          <div class="posts">
-                {posts.map(nome =>  <Post pName ={nome.profileName}  pPic ={nome.profilePic} postPic ={nome.postPic} lastPeopleLikeName = {nome.lastPeopleLikeName} lastPeopleLikePic= {nome.lastPeopleLikePic} likesCount={nome.likesCount}/>)}
-          </div>
-        </div>
+            </div>
 
-        <div class="sidebar">
-          <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-          </div>
+            <div class="sidebar">
+                <User username="Catana" userId="catanacomics" userPic="assets/img/catanacomics.svg"/>
+            <div class="sugestoes">
+                    <div class="titulo">
+                        Sugestões para você
+                        <div>Ver tudo</div>
+                    </div>
+                    {recomendados.map(nome =>  <Sugestao pic ={nome.profilePic}  username ={nome.nameID} reason = {nome.reason}/>)}
+            </div>
 
-          <div class="sugestoes">
-                <div class="titulo">
-                    Sugestões para você
-                    <div>Ver tudo</div>
-                </div>
-                {recomendados.map(nome =>  <Sugestao pic ={nome.profilePic}  username ={nome.nameID} reason = {nome.reason}/>)}
-          </div>
+            <div class="links">
+                    Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
+            </div>
 
-          <div class="links">
-                Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
-          </div>
-
-          <div class="copyright">
-            © 2021 INSTAGRAM DO FACEBOOK
-          </div>
-        </div>
+            <div class="copyright">
+                © 2021 INSTAGRAM DO FACEBOOK
+            </div>
+            </div>
       </div>
     )
 }
+
