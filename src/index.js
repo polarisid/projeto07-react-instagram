@@ -1,14 +1,8 @@
 import ReactDOM from 'react-dom';
+import App from './App';
 
 const minhaTela = document.querySelector(".root");
 
-function RenderHTML(){
-    return(
-        <h1>Title content</h1>
-    );
-}
 
-const htmltela1 = RenderHTML();
-
-ReactDOM.render(htmltela1, minhaTela);
+ReactDOM.render(<App/>, minhaTela);
 alert("tudook")
